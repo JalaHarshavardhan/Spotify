@@ -232,7 +232,7 @@ nav ul li:hover {
         height: 70vh;
     }
     .songList{
-        width: 80vw;
+        width: 68vw;
         height: 70vh;
         display: flex;
         justify-content: center; 
@@ -309,5 +309,38 @@ nav ul li:hover {
             font-size: 13px;
         }
         
+    }
+    @media (max-width:435px) {
+        .container{
+            justify-content: center;
+            margin: 10px auto;
+        }
+        .songListBorder {
+            width: 70vw;
+            margin: auto;
+        }
+        .songItem{
+            width: 68vw;
+        }
+        .songInfo {
+            /* margin: 16px 0; */
+            padding: -36px 0;
+            position: static;
+        }
+        .bottom{
+            height: 18vh;
+        }
+        .icons{
+            margin: 2px 0;
+        }
+        .songlistplay{
+            font-size: 15px;
+        }
+        .songList h1{
+            font-size: 17px;
+        }
+        .songList {
+            width: 50vw;
+        }
     }
 }
