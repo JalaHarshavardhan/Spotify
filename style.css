@@ -377,7 +377,7 @@ nav ul li:hover {
     @media (max-width: 425px) and (max-height: 845px) {
         .container{
             width: 80vw;
-            height: 63vh;
+            height: 64vh;
         }
         .songList{
             width: 80vw;
