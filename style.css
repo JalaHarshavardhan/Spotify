@@ -168,7 +168,7 @@ nav ul li:hover {
 }
 
 @media (max-width:814px) {
-    .container{
+    .container {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -176,21 +176,22 @@ nav ul li:hover {
         align-items: center;
     }
 
-    .songNameAndTime{
-       width: 60vw;
+    .songNameAndTime {
+        width: 60vw;
     }
-    .songListBorder{
+
+    .songListBorder {
         width: 64vw;
 
     }
 
-    .songItem{
+    .songItem {
         width: 64vw;
     }
 }
 
 @media (max-width:513px) {
-    .container{
+    .container {
         display: flex;
         width: 75vw;
         height: 70vh;
@@ -198,31 +199,36 @@ nav ul li:hover {
         justify-content: center;
         align-items: center;
     }
-    .songList{
+
+    .songList {
         height: 60vh;
     }
-    .songInfo{
+
+    .songInfo {
         font-size: 10px;
     }
-    .songList h1{
+
+    .songList h1 {
 
         font-size: 20px;
     }
 
-    .songListBorder{
+    .songListBorder {
         height: 55vh;
     }
-    .logo img{
+
+    .logo img {
         width: 6vw;
     }
-    .songItem img{
+
+    .songItem img {
         height: 6vh;
         width: 6vw;
     }
 }
 
-@media (min-width: 375px) and (max-width: 436px){
-    .container{
+@media (min-width: 375px) and (max-width: 436px) {
+    .container {
         display: flex;
         width: 310px;
         margin: 10px 40px;
@@ -231,116 +237,162 @@ nav ul li:hover {
         justify-content: center;
         height: 70vh;
     }
-    .songList{
+
+    .songList {
         width: 68vw;
         height: 70vh;
         display: flex;
-        justify-content: center; 
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         margin: 0 5px;
     }
-    .songListBorder{
+
+    .songListBorder {
         width: 80vw;
-       
+
     }
-    .songItem{
+
+    .songItem {
 
         width: 80vw;
         font-size: 12px;
 
     }
 
-    .songNameAndTime{
+    .songNameAndTime {
         width: 78vw;
     }
 
-    .songItem img{
+    .songItem img {
         width: 20px;
         height: 20px;
     }
-    .songInfo{
+
+    .songInfo {
         font-size: 12px;
     }
-    nav ul li{
+
+    nav ul li {
         display: none;
     }
-    nav ul{
+
+    nav ul {
         display: flex;
         justify-content: center;
     }
-    .logo{
+
+    .logo {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 }
+
 @media (max-width:592px) {
-    .container{
+    .container {
         justify-content: center;
         margin: 10px auto;
     }
+
     .songListBorder {
         width: 70vw;
         margin: auto;
     }
-    .songItem{
+
+    .songItem {
         width: 68vw;
     }
+
     .songInfo {
         /* margin: 16px 0; */
         padding: -36px 0;
         position: static;
     }
-    .bottom{
+
+    .bottom {
         height: 18vh;
     }
-    .icons{
+
+    .icons {
         margin: 2px 0;
     }
-    .songlistplay{
+
+    .songlistplay {
         font-size: 15px;
     }
+
     @media (max-width: 368px) {
-        .songNameAndTime{
+        .songNameAndTime {
             font-size: 13px;
         }
-        .songlistplay{
+
+        .songlistplay {
             font-size: 13px;
         }
-        
+
     }
+
     @media (max-width:435px) {
-        .container{
+        .container {
             justify-content: center;
             margin: 10px auto;
         }
+
         .songListBorder {
             width: 70vw;
             margin: auto;
         }
-        .songItem{
+
+        .songItem {
             width: 68vw;
         }
+
         .songInfo {
             /* margin: 16px 0; */
             padding: -36px 0;
             position: static;
         }
-        .bottom{
+
+        .bottom {
             height: 18vh;
         }
-        .icons{
+
+        .icons {
             margin: 2px 0;
         }
-        .songlistplay{
+
+        .songlistplay {
             font-size: 15px;
         }
-        .songList h1{
+
+        .songList h1 {
             font-size: 17px;
         }
+
         .songList {
             width: 50vw;
+        }
+    }
+    @media (max-width: 425px ) and (max-height: 845px) {
+        .container{
+            width: 80vw;
+            height: 69vh;
+        }
+        .songList{
+            width: 80vw;
+        }
+        .songListBorder{
+            width: 78vw;
+            height: 62vh;
+        }
+        .songItem{
+            width: 76vw;
+            font-size: 15px;
+        }
+        .songItem img{
+            width: 8vw;
+            height: 5vh;
         }
     }
 }
