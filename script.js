@@ -79,6 +79,20 @@ audioElement.addEventListener('timeupdate', () => {
     myProgressBar.value = progress
 })
 
+
+// Play the next song automatically when the current song completes
+audioElement.addEventListener('ended', () => {
+    songIndex = (songIndex + 1) % songs.length; // Calculate the index of the next song
+    audioElement.src = songs[songIndex].filePath; // Set the source of the Audio element to the next song
+    audioElement.play(); // Play the next song
+    document.getElementsByClassName("songInfo")[0].innerHTML = `<img src="playing.gif" alt="" style="opacity: 1;"> ${songs[songIndex].songName}`;
+    masterPlay.classList.remove('fa-circle-play');
+    masterPlay.classList.add('fa-circle-pause');
+    gif.style.opacity = 1;
+});
+
+
+
 myProgressBar.addEventListener('change', () => {
     audioElement.currentTime = (myProgressBar.value * audioElement.duration) / 100
 })
@@ -154,6 +168,8 @@ document.getElementById('next').addEventListener('click', () => {
     audioElement.play()
     masterPlay.classList.add('fa-circle-pause')
     masterPlay.classList.remove('fa-circle-play')
+
+    
 })
 document.getElementById('previous').addEventListener('click', () => {
     if (songIndex <= 0) {
