@@ -52,6 +52,25 @@ masterPlay.addEventListener('click', () => {
     }
 })
 
+// document.querySelectorAll(".songItem").addEventListener('click', () => {
+//     if (audioElement.paused || audioElement.currentTime <= 0) {
+//         audioElement.play()
+//         masterPlay.classList.remove('fa-circle-play')
+//         masterPlay.classList.add('fa-circle-pause')
+//         gif.style.opacity = 1
+//         document.getElementsByClassName("songInfo")[0].innerHTML = `<img src="playing.gif" alt="" style="opacity: 1;"> ${songs[songIndex].songName}`
+//         // document.getElementsByClassName("songInfo")[0].innerText = songs[songIndex].songName;
+//     }
+//     else {
+//         audioElement.pause()
+//         masterPlay.classList.add('fa-circle-play')
+//         masterPlay.classList.remove('fa-circle-pause')
+//         gif.style.opacity = 0
+//         makeAllPlays()
+//         document.getElementsByClassName("songInfo")[0].innerHTML = `<img src="playing.gif" alt="" style="opacity: 0;"> ${songs[songIndex].songName}`
+//     }
+// })
+
 // Listen to Events
 
 audioElement.addEventListener('timeupdate', () => {
@@ -95,6 +114,32 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element) =>
 
     })
 });
+
+
+const songItemBox = Array.from(document.getElementsByClassName('songItem'));
+
+songItemBox.forEach((element) => {
+  element.addEventListener('click', () => {
+    const clickedIndex = songItemBox.indexOf(element);
+
+    if (audioElement.paused || audioElement.currentTime <= 0) {
+      audioElement.src = songs[clickedIndex].filePath;
+      audioElement.play();
+      masterPlay.classList.remove('fa-circle-play');
+      masterPlay.classList.add('fa-circle-pause');
+      gif.style.opacity = 1;
+      document.getElementsByClassName("songInfo")[0].innerHTML = `<img src="playing.gif" alt="" style="opacity: 1;"> ${songs[clickedIndex].songName}`;
+    } else {
+      audioElement.pause();
+      masterPlay.classList.add('fa-circle-play');
+      masterPlay.classList.remove('fa-circle-pause');
+      gif.style.opacity = 0;
+      makeAllPlays();
+      document.getElementsByClassName("songInfo")[0].innerHTML = `<img src="playing.gif" alt="" style="opacity: 0;"> ${songs[clickedIndex].songName}`;
+    }
+  });
+});
+
 
 document.getElementById('next').addEventListener('click', () => {
     if (songIndex >= 9) {
