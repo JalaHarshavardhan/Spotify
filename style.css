@@ -274,7 +274,8 @@ nav ul li:hover {
         align-items: center;
         justify-content: center;
     }
-    @media (max-width:412px) {
+}
+@media (max-width:592px) {
     .container{
         justify-content: center;
         margin: 10px auto;
@@ -299,5 +300,14 @@ nav ul li:hover {
     }
     .songlistplay{
         font-size: 15px;
+    }
+    @media (max-width: 368px) {
+        .songNameAndTime{
+            font-size: 13px;
+        }
+        .songlistplay{
+            font-size: 13px;
+        }
+        
     }
 }
