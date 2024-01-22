@@ -129,7 +129,9 @@ nav ul li:hover {
     scrollbar-width: none;
 
 }
-
+.songListBorder::-webkit-scrollbar {
+  width: 0px;
+}
 .bottom {
     display: flex;
     flex-direction: column;
